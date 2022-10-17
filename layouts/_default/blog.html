@@ -36,119 +36,21 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9">
+        {{ range where .Pages "Type" "post" }}
         <div class="blog-post">
           <div class="box-img">
             <img src="/assets/img/blog/blog-1.jpg" alt="" />
           </div>
           <div class="box-content">
-            <h4>Lorem ipsum</h4>
+            <h4>{{.Title | markdownify}}</h4>
             <p>
-              Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse,
-              nihil ut dolore disputandum putant sed ut enim inter mediocrem
-              animadversionem atque in ea quid et quas molestias excepturi sint,
-              obcaecati cupiditate non possim accommodare torquatos nostros?
-              quos dolores suscipiantur maiorum voluptatum adipiscendarum causa.
-              Continue reading
+              {{.Description | markdownify }}
             </p>
             <a href="">Continue reading</a>
             <p><span>May 22, 2020 | 23 Comments</span></p>
           </div>
         </div>
-
-        <div class="blog-post">
-          <div class="box-img">
-            <img src="/assets/img/blog/blog-1.jpg" alt="" />
-          </div>
-          <div class="box-content">
-            <h4>Lorem ipsum</h4>
-            <p>
-              Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse,
-              nihil ut dolore disputandum putant sed ut enim inter mediocrem
-              animadversionem atque in ea quid et quas molestias excepturi sint,
-              obcaecati cupiditate non possim accommodare torquatos nostros?
-              quos dolores suscipiantur maiorum voluptatum adipiscendarum causa.
-              Continue reading
-            </p>
-            <a href="">Continue reading</a>
-            <p>May 22, 2020 | 23 Comments</p>
-          </div>
-        </div>
-
-        <div class="blog-post">
-          <div class="box-img">
-            <img src="/assets/img/blog/blog-1.jpg" alt="" />
-          </div>
-          <div class="box-content">
-            <h4>Lorem ipsum</h4>
-            <p>
-              Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse,
-              nihil ut dolore disputandum putant sed ut enim inter mediocrem
-              animadversionem atque in ea quid et quas molestias excepturi sint,
-              obcaecati cupiditate non possim accommodare torquatos nostros?
-              quos dolores suscipiantur maiorum voluptatum adipiscendarum causa.
-              Continue reading
-            </p>
-            <a href="">Continue reading</a>
-            <p>May 22, 2020 | 23 Comments</p>
-          </div>
-        </div>
-
-        <div class="blog-post">
-          <div class="box-img">
-            <img src="/assets/img/blog/blog-1.jpg" alt="" />
-          </div>
-          <div class="box-content">
-            <h4>Lorem ipsum</h4>
-            <p>
-              Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse,
-              nihil ut dolore disputandum putant sed ut enim inter mediocrem
-              animadversionem atque in ea quid et quas molestias excepturi sint,
-              obcaecati cupiditate non possim accommodare torquatos nostros?
-              quos dolores suscipiantur maiorum voluptatum adipiscendarum causa.
-              Continue reading
-            </p>
-            <a href="">Continue reading</a>
-            <p>May 22, 2020 | 23 Comments</p>
-          </div>
-        </div>
-
-        <div class="blog-post">
-          <div class="box-img">
-            <img src="/assets/img/blog/blog-1.jpg" alt="" />
-          </div>
-          <div class="box-content">
-            <h4>Lorem ipsum</h4>
-            <p>
-              Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse,
-              nihil ut dolore disputandum putant sed ut enim inter mediocrem
-              animadversionem atque in ea quid et quas molestias excepturi sint,
-              obcaecati cupiditate non possim accommodare torquatos nostros?
-              quos dolores suscipiantur maiorum voluptatum adipiscendarum causa.
-              Continue reading
-            </p>
-            <a href="">Continue reading</a>
-            <p>May 22, 2020 | 23 Comments</p>
-          </div>
-        </div>
-
-        <div class="blog-post">
-          <div class="box-img">
-            <img src="/assets/img/blog/blog-1.jpg" alt="" />
-          </div>
-          <div class="box-content">
-            <h4>Lorem ipsum</h4>
-            <p>
-              Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse,
-              nihil ut dolore disputandum putant sed ut enim inter mediocrem
-              animadversionem atque in ea quid et quas molestias excepturi sint,
-              obcaecati cupiditate non possim accommodare torquatos nostros?
-              quos dolores suscipiantur maiorum voluptatum adipiscendarum causa.
-              Continue reading
-            </p>
-            <a href="">Continue reading</a>
-            <p>May 22, 2020 | 23 Comments</p>
-          </div>
-        </div>
+        {{end}}
       </div>
       <div class="col-md-3">
         <div class="list-taxonomy">
