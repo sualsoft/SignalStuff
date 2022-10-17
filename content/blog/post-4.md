@@ -1,10 +1,9 @@
 ---
 title: Lorem ipsum dolor sit amet.
 description: "Quae fuerit causa, nollem me ab eo ortum, tam crudelis fuisse, nihil ut dolore disputandum putant sed ut enim inter mediocrem animadversionem atque in ea quid et quas molestias excepturi sint, obcaecati cupiditate non possim accommodare torquatos nostros? quos dolores suscipiantur maiorum voluptatum adipiscendarum causa. "
-
-categories: [ "other", English ]
+categories: Other
 type: post
-date: 2022-07-01T14:00:00-06:00
+date: 2020-07-01T14:00:00-06:00
 comments: 23
 image: /assets/img/blog/blog-1.jpg
 ---

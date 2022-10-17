@@ -36,7 +36,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9">
-        {{ range where .Pages "Type" "post" }}
+        {{ range .Pages.GroupByDate "2006-01" }}
+        <h3>{{ .Key }}</h3>
+        {{ range .Pages }}
         <div class="blog-post">
           <div class="box-img">
             <img src="{{ .Params.image }}" alt="" />
@@ -54,6 +56,7 @@
           </div>
         </div>
         {{end}}
+        {{end}}
       </div>
       <div class="col-md-3">
         <div class="list-taxonomy">
@@ -67,7 +70,7 @@
         <div class="list-taxonomy mt-5">
           <h3>Archives</h3>
           <ul>
-            {{ range .Data.Pages.GroupByDate " January 2006" }}
+            {{ range .Data.Pages.GroupByDate "2006" }}
             <li><a href="/archives">{{ .Key }}</a></li>
 
             {{end}}
