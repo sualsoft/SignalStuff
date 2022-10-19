@@ -5,3 +5,8 @@ title = 'My New Hugo Site'
 [taxonomies]
   tag = "tags"
   category = "categories"
+  year = "year"
+	month = "month"
+
+[outputs]
+    home = [ "HTML", "JSON", "RSS"]

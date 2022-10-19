@@ -36,9 +36,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9">
-        {{ range .Pages.GroupByDate "2006-01" }}
-        <h3>{{ .Key }}</h3>
-        {{ range .Pages }}
+        
+        {{ range (.Site.Pages.GroupByDate "Jan 2006") }}
+        <h3 id="{{ .Key | urlize }}">{{ .Key }}</h3>
+        {{ range (where .Pages "Type" "post") }}
         <div class="blog-post">
           <div class="box-img">
             <img src="{{ .Params.image }}" alt="" />
@@ -56,7 +57,9 @@
           </div>
         </div>
         {{end}}
+        <!---->
         {{end}}
+
       </div>
       <div class="col-md-3">
         <div class="list-taxonomy">
@@ -70,8 +73,8 @@
         <div class="list-taxonomy mt-5">
           <h3>Archives</h3>
           <ul>
-            {{ range .Data.Pages.GroupByDate "2006" }}
-            <li><a href="/archives">{{ .Key }}</a></li>
+            {{ range (.Site.Pages.GroupByDate "Jan 2006") }}
+            <li><a href="/blog/archives#{{ .Key | urlize }}">{{ .Key }}</a></li>
 
             {{end}}
           </ul>

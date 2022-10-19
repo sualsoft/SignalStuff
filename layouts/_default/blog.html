@@ -15,13 +15,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-12 text-center"></div>
             <div class="col-lg-6">
-              <form action="" method="post" data-aos="fade-up">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Search in our blog"
-                /><input type="submit" value="Search" />
-              </form>
+              {{partial "search.html"}}
             </div>
           </div>
         </div>
@@ -35,7 +29,7 @@
 <section class="blog">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-9 search">
         {{ range where .Pages "Type" "post" }}
         <div class="blog-post">
           <div class="box-img">
@@ -68,7 +62,7 @@
           <h3>Archives</h3>
           <ul>
             {{ range .Data.Pages.GroupByDate " January 2006" }}
-            <li><a href="/archives">{{ .Key }}</a></li>
+            <li><a href="/blog/archives#{{ .Key | urlize }}">{{ .Key }}</a></li>
 
             {{end}}
           </ul>
