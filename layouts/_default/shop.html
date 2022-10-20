@@ -450,88 +450,19 @@
       <h2>Popular questions</h2>
     </header>
     <div class="row">
+      {{ range where .Site.Pages "Type" "question" }}
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
         <div class="box">
           <p class="mb-5">
-            <strong>Lorem ipsum dolor sit amet.</strong>
+            <strong>{{.Title}}</strong>
           </p>
           <p class="mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            perferendis sunt ut? Tempora hic, ea aliquam fugit illum nulla,
-            blanditiis quasi officia autem obcaecati ex.
+            {{.Description}}
           </p>
-          <a href="https://hamstudy.org/">Read more</a>
+          <a href="{{.Permalink}}">Read more</a>
         </div>
       </div>
-
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="box">
-          <p class="mb-5">
-            <strong>Lorem ipsum dolor sit amet.</strong>
-          </p>
-          <p class="mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            perferendis sunt ut? Tempora hic, ea aliquam fugit illum nulla,
-            blanditiis quasi officia autem obcaecati ex.
-          </p>
-          <a href="https://hamstudy.org/">Read more</a>
-        </div>
-      </div>
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="box">
-          <p class="mb-5">
-            <strong>Lorem ipsum dolor sit amet.</strong>
-          </p>
-          <p class="mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            perferendis sunt ut? Tempora hic, ea aliquam fugit illum nulla,
-            blanditiis quasi officia autem obcaecati ex.
-          </p>
-          <a href="https://hamstudy.org/">Read more</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="box">
-          <p class="mb-5">
-            <strong>Lorem ipsum dolor sit amet.</strong>
-          </p>
-          <p class="mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            perferendis sunt ut? Tempora hic, ea aliquam fugit illum nulla,
-            blanditiis quasi officia autem obcaecati ex.
-          </p>
-          <a href="https://hamstudy.org/">Read more</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="box">
-          <p class="mb-5">
-            <strong>Lorem ipsum dolor sit amet.</strong>
-          </p>
-          <p class="mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            perferendis sunt ut? Tempora hic, ea aliquam fugit illum nulla,
-            blanditiis quasi officia autem obcaecati ex.
-          </p>
-          <a href="https://hamstudy.org/">Read more</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="box">
-          <p class="mb-5">
-            <strong>Lorem ipsum dolor sit amet.</strong>
-          </p>
-          <p class="mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-            perferendis sunt ut? Tempora hic, ea aliquam fugit illum nulla,
-            blanditiis quasi officia autem obcaecati ex.
-          </p>
-          <a href="https://hamstudy.org/">Read more</a>
-        </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>
