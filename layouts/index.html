@@ -435,9 +435,7 @@
           <p class="mb-5">
             <strong>{{.Title}}</strong>
           </p>
-          <p class="mb-5">
-            {{.Description}}
-          </p>
+          <p class="mb-5">{{.Description}}</p>
           <a href="{{.Permalink}}">Read more</a>
         </div>
       </div>
@@ -446,5 +444,7 @@
   </div>
 </section>
 <!-- End questions Section -->
+{{ range .Site.Data.products }} {{ partial "product" . }} {{ end }}
 
+<!---->
 {{end}}
