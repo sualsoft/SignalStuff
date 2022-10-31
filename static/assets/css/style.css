@@ -216,7 +216,8 @@ section {
   transition: 0.3s;
 }
 .navbar a i,
-.navbar a:focus i {
+.navbar a:focus i,
+.navbar a:active i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
@@ -736,7 +737,7 @@ section {
 }
 
 .title form input {
-  padding: 8px ;
+  padding: 8px;
   opacity: 0.5;
   border: none;
   border-radius: 4px;
@@ -915,7 +916,7 @@ section {
   display: none;
 }
 
- #searchResult {
+#searchResult {
   list-style: none !important;
   text-align: left !important;
   display: flex !important;
@@ -923,12 +924,12 @@ section {
   margin: 0px !important;
   padding: 0px !important;
 }
-#searchResult li{
+#searchResult li {
   background-color: var(--palette-white);
   padding: 12px;
   margin-top: 2px;
 }
-#searchResult li a{
+#searchResult li a {
   color: var(--action-dark);
 }
 /*--------------------------------------------------------------

@@ -444,7 +444,33 @@
   </div>
 </section>
 <!-- End questions Section -->
-{{ range .Site.Data.products }} {{ partial "product" . }} {{ end }}
+{{ range where .Site.Pages "Type" "product" }}
+
+<div class="product">
+  <h2 class="product__name">{{ .Title }}</h2>
+
+  <img class="product__image" src="{{ .Params.image }}" alt="" />
+
+  <p class="product__description">{{ .Description }}</p>
+  <div class="product__button-container">
+    <div class="product__price">${{ .Params.price }}</div>
+    <button
+      class="snipcart-add-item buy-button"
+      data-item-id="{{ .Permalink }}"
+      data-item-name="{{ .Params.name }}"
+      data-item-price="{{ .Params.price }}"
+      data-item-url="{{ .Permalink }}"
+      data-item-description="{{ .Params.description }}"
+    >
+      Add to cart
+    </button>
+    <button>
+      <a href="{{.Permalink }}">Preview</a>
+    </button>
+  </div>
+</div>
+
+{{ end }}
 
 <!---->
 {{end}}

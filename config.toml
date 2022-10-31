@@ -10,3 +10,7 @@ title = 'My New Hugo Site'
 
 [outputs]
     home = [ "HTML", "JSON", "RSS"]
+
+[params]
+snipcart_test_api_key = "ZDhjMjA2ZWUtNzY4Ny00YTc0LThmYmYtYWRjM2QyZDcwZDlmNjM4MDIyNzY5NjY2NTU2ODEw"
+snipcart_live_api_key = ""
