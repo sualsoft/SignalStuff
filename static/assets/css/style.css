@@ -694,7 +694,37 @@ section {
 /*--------------------------------------------------------------
 # Shop page
 --------------------------------------------------------------*/
+.products .content h2 {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 0px;
+}
+.products .content p span {
+  color: var(--grey);
+}
+.products .content p {
+  color: var(--grey-dark);
+  line-height: 1.38;
+  font-size: 16px;
+}
 
+.products .h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.products .price {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.products .price p {
+  margin: 0px;
+}
+.products .price {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 .title .bg {
   background-color: var(--grey-lightest);
   padding-bottom: 50px;
